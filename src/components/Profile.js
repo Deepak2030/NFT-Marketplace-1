@@ -17,6 +17,7 @@ export default function Profile () {
         //After adding your Hardhat network to your metamask, this code will get providers and signers
         const provider = new ethers.providers.Web3Provider(window.ethereum);
         const signer = provider.getSigner();
+        console.log("this "+signer)
         const addr = await signer.getAddress();
 
         //Pull the deployed contract instance
